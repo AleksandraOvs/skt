@@ -910,18 +910,9 @@ section.section-team {
   .directions-list{
     gap: 60px;
   }
-}
 
-@media (max-width: 480px){
   .slider__button-prev, .slider__button-next {
-    top: 38%;
-  }
+    display:none;
 
-  .slider__button-prev {
-    left: 7px;
-  }
-
-  .slider__button-next {
-   right: 7px;
   }
 }
