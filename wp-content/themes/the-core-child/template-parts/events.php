@@ -33,7 +33,7 @@
         ?>
 
         <!-- выведем ссылку на категорию -->
-        <a class="btn-link" href="<?php echo get_post_type_archive_link('fw-event'); ?>">Все новости</a>
+        <a class="btn-link" href="<?php echo get_post_type_archive_link('fw-event'); ?>">Все мероприятия</a>
 
     </div>
 </section>
