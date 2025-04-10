@@ -56,7 +56,7 @@ if ($crb_cats = carbon_get_post_meta(get_the_ID(), 'crb_post_types')) {
                 }
                         ?>
                         </div>
-                        <div class="slider-news-pagination"></div>
+                        <!-- <div class="slider-news-pagination"></div> -->
                     </div>
                 </div>
             </section>
