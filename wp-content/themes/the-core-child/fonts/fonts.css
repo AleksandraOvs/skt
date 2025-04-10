@@ -1,0 +1,81 @@
+@font-face {
+    font-family: "Yeseva";
+    font-weight:400;
+    src: local("Yeseva"), 
+    url(YesevaOne-Regular.ttf) format("truetype"), 
+    url(YesevaOne-Regular.woff) format("woff"), 
+    url(YesevaOne-Regular.woff2) format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Akrobat";
+    font-weight:300;
+    src: local("Akrobat"), 
+    url(Akrobat-Light.ttf) format("truetype"), 
+    url(Akrobat-Light.woff) format("woff"), 
+    url(Akrobat-Light.woff2) format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Akrobat";
+    font-weight:400;
+    src: local("Akrobat"), 
+    url(Akrobat-Regular.ttf) format("truetype"), 
+    url(Akrobat-Regular.woff) format("woff"), 
+    url(Akrobat-Regular.woff2) format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Akrobat";
+    font-weight:600;
+    src: local("Akrobat"), 
+    url(Akrobat-SemiBold.ttf) format("truetype"), 
+    url(Akrobat-SemiBold.woff) format("woff"), 
+    url(Akrobat-SemiBold.woff2) format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Akrobat";
+    font-weight:700;
+    src: local("Akrobat"), 
+    url(Akrobat-Bold.ttf) format("truetype"), 
+    url(Akrobat-Bold.woff) format("woff"), 
+    url(Akrobat-Bold.woff2) format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Akrobat";
+    font-weight:800;
+    src: local("Akrobat"), 
+    url(Akrobat-Black.ttf) format("truetype"), 
+    url(Akrobat-Black.woff) format("woff"), 
+    url(Akrobat-Black.woff2) format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Noto";
+    font-weight:400;
+    src: local("Noto"), 
+    url(notosans-regular.ttf) format("truetype"), 
+    url(notosans-regular.woff) format("woff"), 
+    url(notosans-regular.woff2) format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Noto";
+    font-weight:700;
+    src: local("Noto"), 
+    url(notosans-bold.ttf) format("truetype"), 
+    url(notosans-bold.woff) format("woff"), 
+    url(notosans-bold.woff2) format("woff2");
+    font-display: swap;
+  }
+
+  
