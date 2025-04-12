@@ -1472,8 +1472,7 @@ button.show-criteria:hover {
 
 .leads-table {
   padding-left: 0;
-  list-style:
-none;
+  list-style:none;
   font-family: 'Akrobat', sans-serif;
   font-size: 18px;
   margin-top: 30px;
@@ -1551,4 +1550,8 @@ none;
     height: auto;
     overflow: unset;
   }
+
+  .contacts__inner__right {
+    padding: 15px;
+}
 }
