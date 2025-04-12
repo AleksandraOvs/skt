@@ -1232,6 +1232,11 @@ button.show-criteria:hover {
     width: 90%;
   }
 
+  .leads-table{
+    overflow-x: scroll;
+  }
+  
+
   .criteria-list {
     margin-top: 70px;
     padding-left: 0;
