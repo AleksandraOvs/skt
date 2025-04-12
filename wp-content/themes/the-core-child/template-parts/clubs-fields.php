@@ -27,7 +27,7 @@
         <li class="leads-table__row _table-head">
                             <div class="leads-table__item">Ведущий клуба:</div>
                             <div class="leads-table__item">Контакты: </div>
-                            <div class="leads-table__item">Регулярность встреч <span>(1&nbsp;раз в&nbsp;неделю)</span></div>
+                            <div class="leads-table__item">Регулярность встреч &#8203;<span>(1&nbsp;раз в&nbsp;неделю)</span></div>
                         </li>
             <?php
                 foreach($club_leads as $club_lead){
