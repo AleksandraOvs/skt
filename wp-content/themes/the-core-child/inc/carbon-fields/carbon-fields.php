@@ -137,89 +137,92 @@ function site_carbon()
         ));
 
     /* Field for FW-EVENT */
+    Container::make('post_meta', 'Дата проведения')
+    ->show_on_post_type('fw-event')
+    ->add_fields(array(
+        Field::make('date', 'crb_event_date', 'Дата проведения')
+            ->set_attribute('placeholder', 'Дата')
+    ));
+
+     /* Field for CLUB */
 
     Container::make('post_meta', 'Дата проведения')
-        ->show_on_post_type('fw-event')
+        ->show_on_post_type('clubs')
         ->add_fields(array(
-            Field::make('date', 'crb_event_date', 'Дата проведения')
-                ->set_attribute('placeholder', 'Дата')
+            Field::make('text', 'crb_club_locate', 'Место расположения')
+                ->set_width(50),
+            Field::make('rich_text', 'crb_club_address', 'Адрес')
+                ->set_width(50),
+            Field::make('complex', 'crb_club_leads', 'Ведущие клуба')
+                ->add_fields(array(
+                    Field::make('text', 'crb_club_lead_name', 'ФИО ведущего')
+                        ->set_width(33),
+                    Field::make('rich_text', 'crb_club_lead_contacts', 'Контакты ведущего')
+                        ->set_width(33),
+                    Field::make('rich_text', 'crb_club_lead_time', 'Регулярность встреч')
+                        ->set_width(33),
+                ))
         ));
 
-    // Container::make('theme_options', 'Общие настройки')
-    //     ->set_page_menu_position(2)
-    //     ->set_icon('dashicons-admin-generic')
-    //     ->add_tab(__('Контакты'), array(
-    //         Field::make('complex', 'crb_contact_links', 'Ссылки контактов')
-    //             ->add_fields(array(
-    //                 Field::make('image', 'crb_contact_link_icon', 'Иконка контактв')
-    //                     ->set_width(33),
-    //                 Field::make('text', 'crb_contact_link_text', 'Текст контакты')
-    //                     ->set_width(33),
 
-    //                 Field::make('text', 'crb_contact_link_link', 'Ссылка контакта')
-    //                     ->set_width(33),
-    //             )),
-    //     ));
+    /* Fields for Clubs-post_type */
+    Container::make('post_meta', 'Контент для страницы')
+        ->show_on_page('page-clubs')
+        ->add_tab(__('Подзаголовок и текстовый блок'), array(
+            Field::make('rich_text', 'crb_club_page_desc', 'Подзаголовок')
+                ->set_width(100),
 
-    // Container::make('theme_options', 'Контент главной страницы')
-    //     ->set_page_menu_position(3)
-    //     ->add_tab(__('Слайдер первого экрана'), array(
-    //         Field::make('complex', 'hero_slides', 'Слайды')
-    //             ->add_fields(array(
-    //                 Field::make('image', 'hero_slide_img', 'Изображение')
-    //                     ->set_width(20),
-    //                 Field::make('text', 'crb_hero_heading', 'Заголовок')
-    //                     ->set_width(30),
-    //                 Field::make('rich_text', 'crb_hero_description', 'Подзаголовок')
-    //                     ->set_width(40)
-    //             )),
-    //     ))
+            Field::make('text', 'crb_club_text_h3', 'Заголовок тестового блока')
+                ->set_width(50),
+            Field::make('rich_text', 'crb_club_text_content', 'Тестовый блок')
+                ->set_width(50),
 
-    //     ->add_tab(__('Второй блок'), array(
-    //         Field::make('text', 'crb_second_heading', 'Заголовок')
-    //             ->set_width(30),
-    //         Field::make('rich_text', 'crb_second_text', 'Текст блока')
-    //             ->set_width(40)
-    //     ))
+            Field::make('text', 'crb_map_code', 'Код карты')
+                ->set_width(50),
+        ))
+        ->add_tab(__('Карта клубов'), array(
+            Field::make('text', 'crb_clubs_map_code', 'Код карты')
+                ->set_width(50),
+        ))
+        ->add_tab(__('Критерии участников'), array(
+            Field::make('rich_text', 'crb_criteria_desc', 'Подзаголовок')
+                ->set_width(50),
+            Field::make('complex', 'crb_criteria_items', 'Критерии')
+                ->add_fields(array(
+                    Field::make('rich_text', 'crb_criteria_item', 'Пункт критерий')
+                ))
+        ))
+        ->add_tab(__('Как создать'), array(
+            Field::make('text', 'crb_creation_head', 'Заголовок')
+                ->set_width(50),
+            Field::make('rich_text', 'crb_creation_text', 'Текст')
+                ->set_width(50),
 
-    //     ->add_tab(__('Виды устройств'), array(
-    //         Field::make('text', 'crb_devices_heading', 'Заголовок')
-    //             ->set_width(30),
-    //         Field::make('rich_text', 'crb_devices_text', 'Текст блока')
-    //             ->set_width(40),
-    //         Field::make('complex', 'devices_pics', 'Устройства')
-    //             ->set_classes('grid-fields')
-    //             ->add_fields(array(
-    //                 Field::make('image', 'crb_device_img', 'Изображение'),
-    //                 Field::make('text', 'crb_device_heading', 'Заголовок'),
-    //             )),
-    //     ))
+            Field::make('text', 'crb_creation_link', 'Ссылка кнопки')
+                ->set_width(50),
+            Field::make('text', 'crb_creation_link_text', 'Текст кнопки')
+                ->set_width(50),
 
-    //     ->add_tab(__('Деятельность'), array(
-    //         Field::make('complex', 'crb_activities', 'Виды деятельности')
-    //             //->set_classes('grid-fields')
-    //             ->add_fields(array(
-    //                 Field::make('text', 'crb_act_head', 'Заголовок'),
-    //                 Field::make('rich_text', 'crb_act_text', 'Описание'),
-    //             )),
-    //     ))
+            Field::make('image', 'crb_creation_image', 'Изображение')
+                ->set_width(50),
 
-    //     ->add_tab(__('Услуги'), array(
-    //         Field::make('rich_text', 'crb_servicrs_desc', 'Описание блока'),
-    //         Field::make('complex', 'crb_services', 'Услуги')
-    //             //->set_classes('grid-fields')
-    //             ->add_fields(array(
-    //                 Field::make('text', 'crb_service_head', 'Заголовок'),
-    //             )),
-    //     ))
+        ))
 
-    //     ->add_tab(__('Блок Партнеры'), array(
-    //         Field::make('image', 'crb_partners_background', 'Фон секции'),
-    //         Field::make('complex', 'crb_partners', 'Блок Парнеры')
-    //             ->add_fields(array(
-    //                 Field::make('image', 'crb_partner_logo', 'Логотип'),
-    //                 Field::make('text', 'crb_partner_name', 'Название'),
-    //                 Field::make('text', 'crb_partner_link', 'Ссылка'),
-    //             ))
-    //     ));
+        ->add_tab(__('Блок Программа'), array(
+            Field::make('text', 'crb_progg_head', 'Заголовок')
+                ->set_width(50),
+            Field::make('rich_text', 'crb_progg_text', 'Текст')
+                ->set_width(50),
+
+            Field::make('text', 'crb_progg_link', 'Ссылка кнопки')
+                ->set_width(50),
+            Field::make('text', 'crb_progg_link_text', 'Текст кнопки')
+                ->set_width(50),
+
+            Field::make('image', 'crb_progg_image', 'Изображение')
+                ->set_width(50),
+
+        ));
+
+
 }

@@ -7,7 +7,6 @@ if ($team_items = carbon_get_post_meta(get_the_ID(), 'crb_team_list')) {
                 echo '<h2 class="title">' . $head . '</h2>';
             }
             ?>
-
             <div class="swiper team-slider">
                 <div class="swiper-wrapper">
                     <?php
