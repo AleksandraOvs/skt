@@ -19,7 +19,7 @@ if ($team_items = carbon_get_post_meta(get_the_ID(), 'crb_team_list')) {
                                 <img src="<?php echo $team_img_url ?>" alt="<?php echo $team_item['crb_team_name'] ?>" />
                             </div>
                             <div class="team-name">
-                                <h4><?php echo $team_item['crb_team_name'] ?></h4>
+                                <div><?php echo $team_item['crb_team_name'] ?></div>
                             </div>
 
                             <div class="team-desc">

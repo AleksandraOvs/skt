@@ -359,6 +359,10 @@ section.section-nums {
   grid-area: 2 / 4 / 3 / 5;
 }
 
+.num-item__num .color-white {
+  color: #fff;
+}
+
 
 .num-item__num {
   position: relative;
@@ -368,6 +372,8 @@ section.section-nums {
   color: var(--accent);
   line-height: 120%;
 }
+
+/* .num-item__num  */
 
 .num-item__desc {
   position: relative;
@@ -672,6 +678,10 @@ form p span .cf-input {
   margin-top: 20px;
 }
 
+.swiper.links-slider .slider-news-pagination{
+  display: none;
+}
+
 .links-item span {
   width: calc(100% - 80px);
   color: var(--main);
@@ -747,10 +757,13 @@ section.section-team {
   font-size: 16px;
 }
 
-.team-name h4 {
+.team-name div {
   font-size: 30px;
   font-family: 'Akrobat', sans-serif;
   text-align: center;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
 }
 
 .team-name {
@@ -1488,6 +1501,12 @@ none;
 .accordion-header span {
   width: calc(100% - 41px);
   font-size: 18px;
+}
+
+.swiper.links-slider .slider-news-pagination {
+  margin-top: 20px;
+  justify-content: center;
+  display: flex;
 }
 
   #map {

@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+  function setDecoreFirstWord(cssSelector) {
+    document.querySelectorAll(cssSelector).forEach((elem) => {
+       let textNode = elem.firstChild;
+       if (textNode?.nodeType === 3) {
+          let words = textNode.textContent.trim().split(" ");
+          if (words[0]) {
+             words[0] = `<span class="color-white">${words[0]}</span>`;
+             elem.innerHTML = words.join(" ");
+          }
+       }
+    });
+ }
+ 
+ window.addEventListener("DOMContentLoaded", setDecoreFirstWord(".num-item__num"));
   //anim numbers
 
 
@@ -72,5 +87,6 @@ document.addEventListener('DOMContentLoaded', function () {
       button.style.display = 'none';
     });
   });
+
 });
 
