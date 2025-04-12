@@ -1074,8 +1074,20 @@ h3.club-heading {
   display: flex;
 }
 
+.leads-table__item a {
+  color: var(--main);
+}
+
+.leads-table__row._table-head div:nth-child(3) {
+  text-align: center;
+}
+
 .leads-table__row .leads-table__item {
   width: calc(100% / 3);
+}
+
+.leads-table__row div:nth-child(2) {
+  width: 400px;
 }
 
 ._table-head .leads-table__item {
@@ -1451,6 +1463,9 @@ none;
   width: 100%;
 }
 
+.leads-table__row div:nth-child(2) {
+  min-width: 300px !important;
+}
 
 .leads-table__row .leads-table__item {
   width: auto;
