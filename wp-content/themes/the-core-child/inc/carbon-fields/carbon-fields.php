@@ -138,13 +138,23 @@ function site_carbon()
 
     /* Field for FW-EVENT */
     Container::make('post_meta', 'Дата проведения')
-    ->show_on_post_type('fw-event')
-    ->add_fields(array(
-        Field::make('date', 'crb_event_date', 'Дата проведения')
-            ->set_attribute('placeholder', 'Дата')
-    ));
+        ->show_on_post_type('fw-event')
+        ->add_fields(array(
+            Field::make('date', 'crb_event_date', 'Дата проведения')
+                ->set_attribute('placeholder', 'Дата'),
+        ));
 
-     /* Field for CLUB */
+    Container::make('post_meta', 'Изображения')
+        ->show_on_category('events-reports')
+        ->add_fields(array(
+            Field::make('complex', 'crb_event_images', 'Изображения (4)')
+                ->set_max(4)
+                ->add_fields(array(
+                    Field::make('image', 'crb_event_thumb_img', 'Изображение')
+                ))
+        ));
+
+    /* Field for CLUB */
 
     Container::make('post_meta', 'Дата проведения')
         ->show_on_post_type('clubs')
@@ -223,6 +233,4 @@ function site_carbon()
                 ->set_width(50),
 
         ));
-
-
 }

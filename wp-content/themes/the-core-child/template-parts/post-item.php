@@ -24,25 +24,8 @@
     <?php
    }
 ?>
-    
-
-    <?php
+  
    
-        if ( get_post_type(get_the_ID()) === 'fw-event'  ){
-           
-            if ($event_date = carbon_get_post_meta(get_the_ID(), 'crb_event_date') && !has_category('events-reports')){
-
-               echo '<div class="post-item__date"><span>Дата проведения: </span>'.date('d-m-Y').'</div>';
-            }else {
-                ?>
-                     <div class="post-item__date" style="display: block; margin: 0 auto;"><?php echo the_date() ?></div>
-                <?php
-            }
-        }else {
-            ?>
             <div class="post-item__date"><?php echo the_date() ?></div>
-            <?php
-        }
-    ?>
-
+          
     </div>

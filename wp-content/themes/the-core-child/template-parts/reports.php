@@ -21,7 +21,7 @@ if ($query->have_posts()) {
         echo '<div class="swiper news-slider"><div class="swiper-wrapper news-slider-wrapper">';
         while ($query->have_posts()) {
             $query->the_post();
-            get_template_part('template-parts/post-item');
+            get_template_part('template-parts/post-item-event');
         }
         echo '</div></div>';
     } else {
